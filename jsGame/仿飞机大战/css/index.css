@@ -1,0 +1,39 @@
+.wrap {
+    height: 800px;
+    width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+    border: 1px solid #000;
+
+}
+
+
+
+
+
+.score {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 3px solid #eee;
+}
+
+.map {
+    opacity: 1;
+    width:512px;
+    height: 768px;
+    background: url("/images/bg_1.jpg") no-repeat;
+
+    position: absolute;
+    
+}
+
+.gamestart {
+    opacity: 0;
+}
+
+.gameover {
+    opacity: 0;
+}
+

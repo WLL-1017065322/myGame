@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+      .map {
+        position: relative;
+        width: 602px;
+        height: 602px;
+        background-color: #ccc;
+        display: block;
+        /* border: 1px solid #000; */
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <div class="map"></div> -->
+    <div class="map">
+      <canvas
+        id="myCanvas"
+        width="602px"
+        height="602px"
+      ></canvas>
+    </div>
+
+    <button class="start">开始</button>
+    <button class="reset">重新开始</button>
+    <button class="stop">暂停</button>
+    <script src="./main1.js"></script>
+    <div>得分：</div>
+    <div id="score"></div>
+    <script>
+      //test code
+      //    var fd = new Food;
+      // fd.init(document.querySelector(".map"))
+      // fd.init(document.querySelector(".map"))
+      // fd.init(document.querySelector(".map"))
+      // fd.init(document.querySelector(".map"))
+      //console.log(fd.x + "======" + fd.y)
+
+      // var sn = new Snake;
+
+      //初始化游戏对象
+      var game = new Game(document.querySelector(".map"));
+      var score = document.getElementById("score");
+      // var canvasBoard = new canvasBoard();
+      var board = document.getElementById('myCanvas')  
+      var context = board.getContext('2d');
+      var scoreNum = 0;
+
+      var aboard = new CanvasBoard();
+      aboard.drawCanvas();
+      score.innerHTML = scoreNum;
+      //游戏开始
+      game.init();
+      //添加 蛇的暂停和重新开始 19.5.6
+      document.querySelector(".start").onclick = function() {
+        game.init();
+      };
+      document.querySelector(".reset").onclick = function() {
+        location.reload();
+      };
+      document.querySelector(".stop").onclick = function() {
+        alert("暂停");
+      };
+    </script>
+  </body>
+</html>

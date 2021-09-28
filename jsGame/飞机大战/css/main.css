@@ -1,0 +1,156 @@
+﻿@charset "UTF-8";
+/**
+ *飞机大战css
+ * @authors 水泡泡 (xiuyer@qq.com)
+ * @date    2017-12-28 16:08:21
+ * @version v1.0
+ */
+
+body,p,img,h3{margin: 0;padding: 0;}
+body {
+    font-family: "microsoft yahei";
+    overflow: hidden;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+#wrap {
+    position: relative;
+    margin: 20px auto;
+    width: 512px;
+    height: 768px;
+    overflow: hidden;
+}
+#wrap #level ,#wrap #gameover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 13;
+}
+#wrap h3{
+    margin: 100px 0;
+    color: #FFF;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+#wrap #level p {
+    margin: 40px auto;
+    width: 150px;
+    height: 30px;
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+#wrap #level p:hover {
+    background-color:#aee8f4;
+}
+#wrap .hide {
+    display: none;
+}
+#wrap #gameover p {
+    margin-bottom: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+#wrap #gameover p span {
+    margin: 6px;
+    font-size: 22px;
+    color: #F60;
+}
+#wrap #gameover input {
+    display: block;
+    margin: 50px auto;
+    width: 50px;
+    height: 25px;
+    background-color: #AEE8F4;
+    line-height: 25px;
+    border: none;
+    outline:none;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    cursor: pointer;
+}
+#wrap #gameover input:hover {
+    background-color: pink;
+}
+#wrap #score {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px;
+    height: 20px;
+    background-color: rgba(255,255,255,.6);
+    font-size: 16px;
+    line-height: 20px;
+    color: #222;
+    z-index: 16;
+}
+#wrap #map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/bg_1.jpg")  no-repeat;
+}
+#wrap #map .plane {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    z-index: 11;
+}
+#wrap #map .fire {
+    z-index: 9;
+}
+#wrap #map .enemy {
+    z-index: 10;
+}
+#wrap #map img{
+    position: absolute;
+}
+#wrap #map .boom0 ,#wrap #map .boom2{
+    animation:fide1 0.8s forwards;
+    z-index: 8;
+}
+#wrap #map .boom1 {
+    animation:fide2 2s forwards;
+    z-index: 8;
+}
+
+@keyframes fide1 {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+@keyframes fide2 {
+    0% {
+        opacity:1;
+    }
+    25% {
+        opacity:.3;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        opacity:.3;
+    }
+}
